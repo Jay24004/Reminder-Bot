@@ -49,7 +49,7 @@ class Botbase(commands.Bot):
                 await self.load_extension(f"cogs.{file[:-3]}")
 
 
-bot = Botbase(os.environ.get("APP_ID"), False)
+bot = Botbase(os.environ.get("APP_ID"))
 
 
 async def main():
