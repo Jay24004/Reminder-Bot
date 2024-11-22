@@ -1,0 +1,91 @@
+22-11-2024 15:53:36:WARNING:discord.client: PyNaCl is not installed, voice will NOT be supported
+22-11-2024 15:53:50:WARNING:discord.client: PyNaCl is not installed, voice will NOT be supported
+22-11-2024 15:53:50:INFO:discord.client: logging in using static token
+22-11-2024 15:53:52:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 913c9e709b1e4198a644d23aada6816c).
+22-11-2024 15:54:01:WARNING:discord.client: PyNaCl is not installed, voice will NOT be supported
+22-11-2024 15:54:01:INFO:discord.client: logging in using static token
+22-11-2024 15:54:03:ERROR:asyncio: Unclosed connector
+connections: ['deque([(<aiohttp.client_proto.ResponseHandler object at 0x00000254BD9F3C50>, 13393.187)])']
+connector: <aiohttp.connector.TCPConnector object at 0x00000254BDA09040>
+22-11-2024 15:54:18:WARNING:discord.client: PyNaCl is not installed, voice will NOT be supported
+22-11-2024 15:54:18:INFO:discord.client: logging in using static token
+22-11-2024 15:54:19:ERROR:asyncio: Unclosed connector
+connections: ['deque([(<aiohttp.client_proto.ResponseHandler object at 0x0000013B30493C50>, 13409.921)])']
+connector: <aiohttp.connector.TCPConnector object at 0x0000013B2F75E870>
+22-11-2024 15:54:23:WARNING:discord.client: PyNaCl is not installed, voice will NOT be supported
+22-11-2024 15:54:23:INFO:discord.client: logging in using static token
+22-11-2024 15:54:24:ERROR:asyncio: Unclosed connector
+connections: ['deque([(<aiohttp.client_proto.ResponseHandler object at 0x0000012DA80B3C50>, 13414.968)])']
+connector: <aiohttp.connector.TCPConnector object at 0x0000012DA6C1E540>
+22-11-2024 15:54:50:WARNING:discord.client: PyNaCl is not installed, voice will NOT be supported
+22-11-2024 15:54:51:INFO:discord.client: logging in using static token
+22-11-2024 15:54:52:ERROR:asyncio: Unclosed connector
+connections: ['deque([(<aiohttp.client_proto.ResponseHandler object at 0x000001F938463C50>, 13442.234)])']
+connector: <aiohttp.connector.TCPConnector object at 0x000001F9384A7920>
+22-11-2024 15:54:59:WARNING:discord.client: PyNaCl is not installed, voice will NOT be supported
+22-11-2024 15:54:59:INFO:discord.client: logging in using static token
+22-11-2024 15:55:00:ERROR:asyncio: Unclosed connector
+connections: ['deque([(<aiohttp.client_proto.ResponseHandler object at 0x000001F6CF503C50>, 13450.5)])']
+connector: <aiohttp.connector.TCPConnector object at 0x000001F6CE9C7770>
+22-11-2024 15:56:25:WARNING:discord.client: PyNaCl is not installed, voice will NOT be supported
+22-11-2024 15:56:26:INFO:discord.client: logging in using static token
+22-11-2024 15:56:27:ERROR:asyncio: Unclosed connector
+connections: ['deque([(<aiohttp.client_proto.ResponseHandler object at 0x0000017085327E30>, 13537.468)])']
+connector: <aiohttp.connector.TCPConnector object at 0x0000017084E1B410>
+22-11-2024 16:01:14:WARNING:discord.client: PyNaCl is not installed, voice will NOT be supported
+22-11-2024 16:01:15:INFO:discord.client: logging in using static token
+22-11-2024 16:01:17:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 95f960755dafac2af3ef5a2efdae73d2).
+22-11-2024 16:02:24:WARNING:discord.client: PyNaCl is not installed, voice will NOT be supported
+22-11-2024 16:02:25:INFO:discord.client: logging in using static token
+22-11-2024 16:02:26:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: d2707854c4d70a10211e9ffef9afd829).
+22-11-2024 16:03:20:WARNING:discord.client: PyNaCl is not installed, voice will NOT be supported
+22-11-2024 16:03:20:INFO:discord.client: logging in using static token
+22-11-2024 16:03:22:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 6becbb7dffaeadc77c4b9b2d8ab72d44).
+22-11-2024 16:03:59:ERROR:asyncio: Task exception was never retrieved
+future: <Task finished name='CommandTree-invoker' coro=<CommandTree._from_interaction.<locals>.wrapper() done, defined at E:\Work\Reminder Bot\.venv\Lib\site-packages\discord\app_commands\tree.py:1149> exception=TypeError("'in <string>' requires string as left operand, not int")>
+Traceback (most recent call last):
+  File "E:\Work\Reminder Bot\.venv\Lib\site-packages\discord\app_commands\tree.py", line 1151, in wrapper
+    await self._call(interaction)
+  File "E:\Work\Reminder Bot\.venv\Lib\site-packages\discord\app_commands\tree.py", line 1310, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "E:\Work\Reminder Bot\.venv\Lib\site-packages\discord\app_commands\commands.py", line 879, in _invoke_with_namespace
+    if not await self._check_can_run(interaction):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Work\Reminder Bot\.venv\Lib\site-packages\discord\app_commands\commands.py", line 1017, in _check_can_run
+    return await async_all(f(interaction) for f in predicates)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Work\Reminder Bot\.venv\Lib\site-packages\discord\utils.py", line 706, in async_all
+    elem = await elem
+           ^^^^^^^^^^
+  File "E:\Work\Reminder Bot\cogs\dev.py", line 26, in is_dev
+    if interaction.user.id in interaction.client.owner_ids:
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'in <string>' requires string as left operand, not int
+22-11-2024 16:07:11:WARNING:discord.client: PyNaCl is not installed, voice will NOT be supported
+22-11-2024 16:07:11:INFO:discord.client: logging in using static token
+22-11-2024 16:07:13:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 41f41c9b1b1e6b01cd17d2ba2eab27b0).
+22-11-2024 16:09:31:WARNING:discord.client: PyNaCl is not installed, voice will NOT be supported
+22-11-2024 16:09:31:INFO:discord.client: logging in using static token
+22-11-2024 16:09:33:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 5c585c9e972dbb2675a038b41f289153).
+22-11-2024 16:10:48:WARNING:discord.client: PyNaCl is not installed, voice will NOT be supported
+22-11-2024 16:10:48:INFO:discord.client: logging in using static token
+22-11-2024 16:10:50:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: f5037595ab5c449d5cc581c631c6749d).
+22-11-2024 16:16:19:WARNING:discord.client: PyNaCl is not installed, voice will NOT be supported
+22-11-2024 16:16:19:INFO:discord.client: logging in using static token
+22-11-2024 16:16:21:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: cd637fc9a17a0dbc4cc27dd2a1bd5495).
+22-11-2024 16:16:54:ERROR:discord.ext.tasks: Unhandled exception in internal background task 'check_reminders'.
+Traceback (most recent call last):
+  File "e:\Work\Reminder Bot\.venv\Lib\site-packages\discord\ext\tasks\__init__.py", line 241, in _loop
+    await self.coro(*args, **kwargs)
+  File "E:\Work\Reminder Bot\cogs\module.py", line 65, in check_reminders
+    await user.send(embed=embed, view=view)
+  File "e:\Work\Reminder Bot\.venv\Lib\site-packages\discord\abc.py", line 1618, in send
+    data = await state.http.send_message(channel.id, params=params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "e:\Work\Reminder Bot\.venv\Lib\site-packages\discord\http.py", line 758, in request
+    raise HTTPException(response, data)
+discord.errors.HTTPException: 400 Bad Request (error code: 50035): Invalid Form Body
+In components.0.components.0.url: A url is required
+22-11-2024 16:17:36:WARNING:discord.client: PyNaCl is not installed, voice will NOT be supported
+22-11-2024 16:17:36:INFO:discord.client: logging in using static token
+22-11-2024 16:17:39:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: d60dc7af2e96a27229083474d86d23dd).
