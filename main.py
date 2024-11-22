@@ -26,7 +26,7 @@ intesnts = discord.Intents.default()
 
 
 class Botbase(commands.Bot):
-    def __init__(self, application_id, sync: bool = True):
+    def __init__(self, application_id):
         super().__init__(
             intents=intesnts,
             command_prefix=".",
@@ -67,9 +67,6 @@ async def on_ready():
         ),
         status=discord.Status.online,
     )
-    await bot.tree.sync()
-    for guild in bot.guilds:
-        await bot.tree.sync(guild=guild)
 
 
 @bot.tree.command(name="ping", description="Check bots latency")
@@ -79,6 +76,33 @@ async def ping(interaction):
         content=None,
         embed=discord.Embed(description=f"Ping {bot.latency * 1000.0:.2f}ms"),
     )
+
+
+@bot.command(name="about", description="About the bot")
+@app_commands.user_install()
+@app_commands.allowed_contexts(guilds=True, dms=True, private_channels=True)
+@app_commands.allowed_installs(guilds=False, users=True)
+async def about(interaction: discord.Interaction):
+    embed = discord.Embed(
+        title="About",
+        color=bot.default_color,
+        description=(
+            "Hey there! I'm a reminder bot, I can help you set reminders and keep track of them. "
+            "I'm created by <@488614633670967307>.\n\n"
+            "I mostly use user app commands, which means once you add me to your account, "
+            "you can use my commands anywhere - in any server, DM, or group DM."
+        ),
+    )
+    view = discord.ui.View()
+    view.add_item(
+        discord.ui.Button(
+            style=discord.ButtonStyle.link,
+            label="Add me",
+            url="https://discord.com/oauth2/authorize?client_id=1309446419475730502",
+            emoji=bot.link_emoji if bot.link_emoji else "🔗",
+        )
+    )
+    await interaction.response.send_message(embed=embed)
 
 
 @bot.tree.error

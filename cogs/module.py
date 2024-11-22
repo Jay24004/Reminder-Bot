@@ -168,14 +168,6 @@ class Reminder(commands.GroupCog, name="reminder"):
             "All reminders have been deleted", ephemeral=True
         )
 
-    # @app_commands.command(name="ping", description="Check bots latency")
-    # async def ping(self, interaction: Interaction):
-    #     await interaction.response.send_message("Pong!")
-    #     await interaction.edit_original_response(
-    #         content=None,
-    #         embed=discord.Embed(description=f"Ping {self.bot.latency * 1000.0:.2f}ms"),
-    #     )
-
 
 async def setup(bot):
     await bot.add_cog(Reminder(bot))
