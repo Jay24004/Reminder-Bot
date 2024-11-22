@@ -22,9 +22,7 @@ discord.utils.setup_logging(
     root=True,
 )
 
-intesnts = discord.Intents.all()
-intesnts.typing = False
-intesnts.presences = False
+intesnts = discord.Intents.default()
 
 
 class Botbase(commands.Bot):
@@ -101,6 +99,10 @@ async def on_app_command_error(interaction: discord.Interaction, error: Exceptio
     elif isinstance(error, app_commands.errors.MissingPermissions):
         return await interaction.response.send_message(
             "You are missing permissions", ephemeral=True
+        )
+    elif isinstance(error, app_commands.errors.TransformerError):
+        return await interaction.response.send_message(
+            "An error occurred while processing your input", ephemeral=True
         )
     else:
         raise error
